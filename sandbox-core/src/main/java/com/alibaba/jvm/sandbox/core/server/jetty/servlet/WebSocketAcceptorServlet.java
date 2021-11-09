@@ -8,7 +8,6 @@ import com.alibaba.jvm.sandbox.core.CoreModule;
 import com.alibaba.jvm.sandbox.core.manager.CoreModuleManager;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.jetty.websocket.WebSocket;
-import org.eclipse.jetty.websocket.WebSocket.OnTextMessage;
 import org.eclipse.jetty.websocket.WebSocketServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -109,7 +108,7 @@ public class WebSocketAcceptorServlet extends WebSocketServlet {
                 @Override
                 public void release() {
                     final WebSocketConnection resource = get();
-                    if(null != resource) {
+                    if (null != resource) {
                         resource.disconnect();
                     }
 
@@ -150,10 +149,9 @@ public class WebSocketAcceptorServlet extends WebSocketServlet {
                 coreModule.release(conn);
             }
         }
-
     }
 
-    private class InnerOnTextMessage extends InnerWebSocket implements OnTextMessage {
+    private class InnerOnTextMessage extends InnerWebSocket implements WebSocket.OnTextMessage {
 
         private final TextMessageListener textMessageListener;
 

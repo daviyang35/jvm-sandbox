@@ -40,7 +40,7 @@ echo "${SANDBOX_VERSION}" > ${SANDBOX_TARGET_DIR}/cfg/version
 
 # for example
 mkdir -p ${SANDBOX_TARGET_DIR}/example\
-    && cp ../sandbox-debug-module/target/sandbox-debug-module-*-jar-with-dependencies.jar\
+    && cp ../sandbox-module-starter/sandbox-debug-module/target/sandbox-debug-module-*-jar-with-dependencies.jar\
             ${SANDBOX_TARGET_DIR}/example/sandbox-debug-module.jar
 
 # for mgr

@@ -23,7 +23,6 @@ import java.net.InetSocketAddress;
 
 import static com.alibaba.jvm.sandbox.core.util.NetworkUtils.isPortInUsing;
 import static java.lang.String.format;
-import static org.eclipse.jetty.servlet.ServletContextHandler.NO_SESSIONS;
 
 /**
  * Jetty实现的Http服务器
@@ -73,7 +72,6 @@ public class JettyCoreServer implements CoreServer {
                         // stop http server
                         logger.info("{} is stopping", JettyCoreServer.this);
                         httpServer.stop();
-
                     }
 
                 }
@@ -81,7 +79,9 @@ public class JettyCoreServer implements CoreServer {
 
             // destroy http server
             logger.info("{} is destroying", this);
-            while (!httpServer.isStopped()) ;
+            while (!httpServer.isStopped()) {
+                Thread.sleep(500);
+            }
             httpServer.destroy();
 
         } catch (Throwable cause) {
@@ -123,7 +123,7 @@ public class JettyCoreServer implements CoreServer {
      */
     private void initJettyContextHandler() {
         final String namespace = cfg.getNamespace();
-        final ServletContextHandler context = new ServletContextHandler(NO_SESSIONS);
+        final ServletContextHandler context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
 
         final String contextPath = "/sandbox/" + namespace;
         context.setContextPath(contextPath);

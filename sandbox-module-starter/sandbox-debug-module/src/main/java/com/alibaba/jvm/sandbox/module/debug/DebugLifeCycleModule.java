@@ -34,7 +34,7 @@ import static com.alibaba.jvm.sandbox.module.debug.ParamSupported.getParameter;
  */
 @MetaInfServices(Module.class)
 @Information(id = "debug-lifecycle", version = "0.0.1", author = "luanjia@taobao.com")
-public class DebugLifeCycleModule implements Module, ModuleLifecycle{
+public class DebugLifeCycleModule implements Module, ModuleLifecycle {
 
     private final Logger lifeCLogger = LoggerFactory.getLogger("DEBUG-LIFECYCLE-LOGGER");
 
@@ -70,7 +70,7 @@ public class DebugLifeCycleModule implements Module, ModuleLifecycle{
     }
 
     @Command("control")
-    public void control(final Map<String, String> param, final PrintWriter writer){
+    public void control(final Map<String, String> param, final PrintWriter writer) {
         final Printer printer = new ConcurrentLinkedQueuePrinter(writer);
 
         // --- 解析参数 ---
@@ -82,7 +82,7 @@ public class DebugLifeCycleModule implements Module, ModuleLifecycle{
 
 
         int watcherId = moduleEventWatcher.watch(
-                new ExtFilter(){//不增强类，这里只是体验sandbox的生命周期，ExtFilter新增了增强接口的所有实现类，到boostrap ClassLoader中加载类 的能力
+                new ExtFilter() {//不增强类，这里只是体验sandbox的生命周期，ExtFilter新增了增强接口的所有实现类，到boostrap ClassLoader中加载类 的能力
 
                     @Override
                     public boolean doClassFilter(int access, String javaClassName, String superClassTypeJavaClassName, String[] interfaceTypeJavaClassNameArray, String[] annotationTypeJavaClassNameArray) {

@@ -1,6 +1,6 @@
 package com.alibaba.jvm.sandbox.module.debug.util;
 
-import ognl.DefaultMemberAccess;
+import ognl.DefaultClassResolver;
 import ognl.Ognl;
 import ognl.OgnlContext;
 
@@ -112,12 +112,15 @@ public interface Express {
     class OgnlExpress implements Express {
 
         private Object bindObject;
-        private final OgnlContext context = new OgnlContext();
+        private OgnlContext context;
+
+        public OgnlExpress() {
+            this.context = (OgnlContext) Ognl.createDefaultContext(this, new DefaultClassResolver());
+        }
 
         @Override
         public Object get(String express) throws ExpressException {
             try {
-                context.setMemberAccess(new DefaultMemberAccess(true));
                 return Ognl.getValue(express, context, bindObject);
             } catch (Exception e) {
                 throw new ExpressException(express, e);
@@ -128,8 +131,7 @@ public interface Express {
         public boolean is(String express) throws ExpressException {
             try {
                 final Object ret = get(express);
-                return null != ret
-                        && ret instanceof Boolean
+                return ret instanceof Boolean
                         && (Boolean) ret;
             } catch (Throwable t) {
                 return false;

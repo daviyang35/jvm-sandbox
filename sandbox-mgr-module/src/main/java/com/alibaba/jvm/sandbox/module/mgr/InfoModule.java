@@ -5,6 +5,7 @@ import com.alibaba.jvm.sandbox.api.Module;
 import com.alibaba.jvm.sandbox.api.annotation.Command;
 import com.alibaba.jvm.sandbox.api.event.Event;
 import com.alibaba.jvm.sandbox.api.resource.ConfigInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.kohsuke.MetaInfServices;
 
 import javax.annotation.Resource;
@@ -39,7 +40,7 @@ public class InfoModule implements Module {
                 .append("               UNSAFE_SUPPORT : ").append(configInfo.isEnableUnsafe() ? "ENABLE" : "DISABLE").append("\n")
                 .append("                 SANDBOX_HOME : ").append(configInfo.getHome()).append("\n")
                 .append("            SYSTEM_MODULE_LIB : ").append(configInfo.getSystemModuleLibPath()).append("\n")
-                .append("              USER_MODULE_LIB : ").append(configInfo.getUserModuleLibPath()).append("\n")
+                .append("              USER_MODULE_LIB : ").append(StringUtils.join(configInfo.getUserModuleLibPaths(), ";")).append("\n")
                 .append("          SYSTEM_PROVIDER_LIB : ").append(configInfo.getSystemProviderLibPath()).append("\n")
                 .append("           EVENT_POOL_SUPPORT : ").append(configInfo.isEnableEventPool() ? "ENABLE" : "DISABLE");
 //                       /*############################# : */
