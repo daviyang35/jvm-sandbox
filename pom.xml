@@ -137,10 +137,8 @@
 
     <modules>
         <module>sandbox-bom</module>
-        <module>sandbox-agent</module>
-        <module>sandbox-core</module>
+        <module>sandbox-hook</module>
         <module>sandbox-api</module>
-        <module>sandbox-spy</module>
         <module>sandbox-mgr-module</module>
         <module>sandbox-provider-api</module>
         <module>sandbox-common-api</module>
