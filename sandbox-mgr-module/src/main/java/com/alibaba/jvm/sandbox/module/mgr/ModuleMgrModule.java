@@ -63,7 +63,6 @@ public class ModuleMgrModule implements Module {
         writer.println(String.format(format, objectArray));
     }
 
-    // @Http("/list")
     @Command("list")
     public void list(final PrintWriter writer) throws IOException {
 
@@ -103,7 +102,6 @@ public class ModuleMgrModule implements Module {
         output(writer, "total=%s", total);
     }
 
-    // @Http("/flush")
     @Command("flush")
     public void flush(final Map<String, String> param,
                       final PrintWriter writer) throws ModuleException {
@@ -113,14 +111,12 @@ public class ModuleMgrModule implements Module {
         output(writer, "module flush finished, total=%s;", moduleManager.list().size());
     }
 
-    // @Http("/reset")
     @Command("reset")
     public void reset(final PrintWriter writer) throws ModuleException {
         moduleManager.reset();
         output(writer, "module reset finished, total=%s;", moduleManager.list().size());
     }
 
-    // @Http("/unload")
     @Command("unload")
     public void unload(final Map<String, String> param,
                        final PrintWriter writer) {
@@ -138,7 +134,6 @@ public class ModuleMgrModule implements Module {
         output(writer, "total %s module unloaded.", total);
     }
 
-    // @Http("/active")
     @Command("active")
     public void active(final Map<String, String> param,
                        final PrintWriter writer) throws ModuleException {
@@ -161,7 +156,6 @@ public class ModuleMgrModule implements Module {
         output(writer, "total %s module activated.", total);
     }
 
-    // @Http("/frozen")
     @Command("frozen")
     public void frozen(final Map<String, String> param,
                        final PrintWriter writer) throws ModuleException {
@@ -185,7 +179,6 @@ public class ModuleMgrModule implements Module {
         output(writer, "total %s module frozen.", total);
     }
 
-    // @Http("/detail")
     @Command("detail")
     public void detail(final Map<String, String> param,
                        final PrintWriter writer) throws ModuleException {
@@ -220,7 +213,5 @@ public class ModuleMgrModule implements Module {
                 "    mCnt : " + mCnt;
 
         output(writer, sb);
-
     }
-
 }

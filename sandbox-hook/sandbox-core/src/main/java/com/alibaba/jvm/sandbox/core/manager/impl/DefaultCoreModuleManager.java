@@ -191,7 +191,6 @@ public class DefaultCoreModuleManager implements CoreModuleManager {
 
         // 通知生命周期，模块加载完成
         callAndFireModuleLifeCycle(coreModule, MODULE_LOAD_COMPLETED);
-
     }
 
     private void injectResourceOnLoadIfNecessary(final CoreModule coreModule) throws ModuleException {
@@ -628,7 +627,6 @@ public class DefaultCoreModuleManager implements CoreModuleManager {
             logger.info("ModuleJarClassLoader={} will be close: all module unloaded.", loader);
             ((ModuleJarClassLoader) loader).closeIfPossible();
         }
-
     }
 
 

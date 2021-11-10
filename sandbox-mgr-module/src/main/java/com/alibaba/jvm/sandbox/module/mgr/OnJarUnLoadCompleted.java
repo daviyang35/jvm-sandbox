@@ -21,5 +21,4 @@ public class OnJarUnLoadCompleted implements ModuleJarUnLoadSpi {
             cause.printStackTrace();
         }
     }
-
 }

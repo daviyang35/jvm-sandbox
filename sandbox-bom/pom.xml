@@ -39,7 +39,7 @@
                 <groupId>org.kohsuke.metainf-services</groupId>
                 <artifactId>metainf-services</artifactId>
                 <version>1.7</version>
-                <scope>compile</scope>
+                <scope>provider</scope>
             </dependency>
 
             <dependency>

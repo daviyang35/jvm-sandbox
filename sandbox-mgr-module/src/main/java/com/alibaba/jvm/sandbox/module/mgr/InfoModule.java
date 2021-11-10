@@ -24,10 +24,6 @@ public class InfoModule implements Module {
     @Resource
     private ConfigInfo configInfo;
 
-//    @Resource
-//    private EventMonitor eventMonitor;
-
-    //@Http("/version")
     @Command("version")
     public void version(final PrintWriter writer) throws IOException {
         final StringBuilder versionSB = new StringBuilder()
@@ -55,5 +51,4 @@ public class InfoModule implements Module {
         }
 
     }
-
 }

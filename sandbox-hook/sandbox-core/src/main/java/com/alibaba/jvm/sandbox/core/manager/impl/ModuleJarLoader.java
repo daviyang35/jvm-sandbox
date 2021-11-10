@@ -98,9 +98,7 @@ class ModuleJarLoader {
             }
 
             loadedModuleUniqueIds.add(uniqueId);
-
         }
-
 
         logger.info("loaded module-jar completed, loaded {} module in module-jar={}, modules={}",
                 loadedModuleUniqueIds.size(),
@@ -112,7 +110,6 @@ class ModuleJarLoader {
 
 
     void load(final ModuleLoadCallback mCb) throws IOException {
-
         boolean hasModuleLoadedSuccessFlag = false;
         ModuleJarClassLoader moduleJarClassLoader = null;
         logger.info("prepare loading module-jar={};", moduleJarFile);
@@ -127,7 +124,6 @@ class ModuleJarLoader {
             } finally {
                 Thread.currentThread().setContextClassLoader(preTCL);
             }
-
         } finally {
             if (!hasModuleLoadedSuccessFlag
                     && null != moduleJarClassLoader) {
@@ -135,7 +131,6 @@ class ModuleJarLoader {
                 moduleJarClassLoader.closeIfPossible();
             }
         }
-
     }
 
     /**

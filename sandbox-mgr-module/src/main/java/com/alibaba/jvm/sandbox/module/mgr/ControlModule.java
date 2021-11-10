@@ -59,7 +59,6 @@ public class ControlModule implements Module {
         writer.close();
 
         shutdownJvmSandboxHook.start();
-
     }
 
 }
