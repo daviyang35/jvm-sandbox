@@ -28,3 +28,4 @@ target/
 *.swo
 *.swn
 
+dist/

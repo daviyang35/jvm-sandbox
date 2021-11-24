@@ -10,7 +10,7 @@
         <relativePath>../sandbox-module-starter/pom.xml</relativePath>
     </parent>
     <artifactId>sandbox-mgr-module</artifactId>
-    <name>sandbox-mgr-module ${sandbox.version}</name>
+    <name>jvm-sandbox::mgr-module</name>
 
     <build>
         <finalName>sandbox-mgr-module-${project.version}</finalName>

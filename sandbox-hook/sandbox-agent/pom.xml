@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-agent</artifactId>
-    <name>sandbox-agent ${sandbox.version}</name>
+    <name>jvm-sandbox::hook::agent</name>
 
     <build>
         <finalName>sandbox-agent-${project.version}</finalName>

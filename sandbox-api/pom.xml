@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-api</artifactId>
-    <name>sandbox-api ${sandbox.version}</name>
+    <name>jvm-sandbox::api</name>
 
     <dependencies>
         <dependency>

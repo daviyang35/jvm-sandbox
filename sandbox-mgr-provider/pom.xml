@@ -9,7 +9,8 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-mgr-provider</artifactId>
-    <name>sandbox-mgr-provider ${sandbox.version}</name>
+    <name>jvm-sandbox::mgr-provider</name>
+
     <build>
         <finalName>sandbox-mgr-provider-${project.version}</finalName>
         <plugins>

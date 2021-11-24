@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-spy</artifactId>
-    <name>sandbox-spy ${sandbox.version}</name>
+    <name>jvm-sandbox::hook::spy</name>
 
     <build>
         <finalName>sandbox-spy-${project.version}</finalName>

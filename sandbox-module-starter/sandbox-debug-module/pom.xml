@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-debug-module</artifactId>
-    <name>sandbox-debug-module ${sandbox.version}</name>
+    <name>jvm-sandbox::module::debug</name>
 
     <build>
         <finalName>sandbox-debug-module-${sandbox.version}</finalName>

@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-hook</artifactId>
-    <name>sandbox-hook collection</name>
+    <name>jvm-sandbox::hook</name>
     <packaging>pom</packaging>
 
     <modules>

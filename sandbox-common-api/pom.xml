@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-common-api</artifactId>
-    <name>sandbox-common-api ${sandbox.version}</name>
+    <name>jvm-sandbox::common-api</name>
     <dependencies>
         <dependency>
             <groupId>javax.annotation</groupId>

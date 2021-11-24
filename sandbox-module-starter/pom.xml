@@ -9,7 +9,7 @@
         <version>1.4.0</version>
     </parent>
     <artifactId>sandbox-module-starter</artifactId>
-    <name>sandbox-module-starter ${sandbox.version}</name>
+    <name>jvm-sandbox::module::starter</name>
     <packaging>pom</packaging>
 
     <modules>
