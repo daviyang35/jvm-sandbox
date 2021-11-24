@@ -8,15 +8,26 @@
         <artifactId>sandbox</artifactId>
         <version>1.5.0</version>
     </parent>
-    <artifactId>sandbox-hook</artifactId>
-    <name>jvm-sandbox::hook</name>
+    <artifactId>sandbox-module</artifactId>
+    <name>jvm-sandbox::module</name>
     <packaging>pom</packaging>
 
     <modules>
-        <module>sandbox-agent</module>
-        <module>sandbox-core</module>
-        <module>sandbox-spy</module>
+        <module>sandbox-module-debug</module>
+        <module>sandbox-module-mgr</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.jvm.sandbox</groupId>
+            <artifactId>sandbox-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.kohsuke.metainf-services</groupId>
+            <artifactId>metainf-services</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

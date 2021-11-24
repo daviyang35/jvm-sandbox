@@ -4,20 +4,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>sandbox-infra</artifactId>
         <groupId>com.alibaba.jvm.sandbox</groupId>
-        <artifactId>sandbox-hook</artifactId>
         <version>1.5.0</version>
     </parent>
-    <artifactId>sandbox-spy</artifactId>
-    <name>jvm-sandbox::hook::spy</name>
+    <artifactId>sandbox-provider</artifactId>
+    <name>jvm-sandbox::infra::provider</name>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.jvm.sandbox</groupId>
+            <artifactId>sandbox-interface</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -5,11 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.alibaba.jvm.sandbox</groupId>
-        <artifactId>sandbox-hook</artifactId>
+        <artifactId>sandbox-module</artifactId>
         <version>1.5.0</version>
     </parent>
-    <artifactId>sandbox-spy</artifactId>
-    <name>jvm-sandbox::hook::spy</name>
+    <artifactId>sandbox-module-mgr</artifactId>
+    <name>jvm-sandbox::module::mgr</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
