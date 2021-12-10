@@ -17,8 +17,6 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
-
-        <tools-jar>${java.home}/../lib/tools.jar</tools-jar>
     </properties>
 
     <modules>

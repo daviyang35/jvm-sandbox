@@ -184,8 +184,8 @@ check_permission() {
     exit_on_err 1 "permission denied, java process ${TARGET_JVM_PID} is not existed."
 
   # check attach
-  pgrep -U "${SANDBOX_USER}" | grep "${TARGET_JVM_PID}" > /dev/null ||
-    exit_on_err 1 "permission denied, ${SANDBOX_USER} is not allow attach to ${TARGET_JVM_PID}."
+  #pgrep -U "${SANDBOX_USER}" | grep "${TARGET_JVM_PID}" > /dev/null ||
+  #  exit_on_err 1 "permission denied, ${SANDBOX_USER} is not allow attach to ${TARGET_JVM_PID}."
 
   # check $HOME is writeable
   [[ ! -w ${HOME} ]] &&
